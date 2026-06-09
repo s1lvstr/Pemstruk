@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Inventori</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>abcdef</h2>
+            <p>Manajemen Inventori</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="active">Dashboard</li>
+                <li>Laporan</li>
+                <li>Pengaturan</li>
+            </ul>
+        </nav>
+    </aside>
+
+
+    <main class="content">
+
+        <header class="header">
+            <h1>Dashboard</h1>
+
+            <div class="user">
+                <span>Admin</span>
+            </div>
+        </header>
+
+        <!-- stat Cards -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <h4>Total Barang</h4>
+                </div>
+                <div class="stat-card-body">
+                    <div class="stat-number" id="totalBarang">0</div>
+                    <p>Semua barang terdaftar</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <h4>Barang Aktif</h4>
+                </div>
+                <div class="stat-card-body">
+                    <div class="stat-number" id="barangAktif">0</div>
+                    <p>Stok tersedia</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <h4>Stok Menipis</h4>
+                </div>
+                <div class="stat-card-body">
+                    <div class="stat-number" id="stokMenipis">0</div>
+                    <p>Barang perlu restock</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Chart Section -->
+            <div class="table-container">
+                <div class="cart-card">
+                    <div class="cart-header">
+                        <h3>a</h3>
+                    </div>
+                    <div class="cart-content" id="cartContent">
+                        <p class="empty-cart">b</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- report -->
+            <aside class="activity-section">
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <h3>Aktivitas Terbaru</h3>
+                    </div>
+                    <div class="activity-list" id="activityList">
+                        <p class="empty-activity">Belum ada aktivitas</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- data barang -->
+        <section class="table-section">
+
+            <div class="table-header">
+                <h3>Data Barang</h3>
+
+                <button class="btn-tambah">
+                    + Tambah Barang
+                </button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Barang</th>
+                        <th>Kategori</th>
+                        <th>Lokasi</th>
+                        <th>Stok</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="dataTable">
+                    <tr>
+                        <td colspan="7">
+                            Belum ada data barang
+                        </td>
+                    </tr>
+
+                   
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- modal add -->
+<div id="modalTambah" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Tambah Barang Baru</h2>
+            <button class="modal-close" onclick="closeModalTambah()">&times;</button>
+        </div>
+
+        <form id="formTambah" class="modal-form">
+            <div class="form-group">
+                <label for="nama">Nama Barang *</label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama barang">
+            </div>
+
+            <div class="form-group">
+                <label for="kategori">Kategori *</label>
+                <input type="text" id="kategori" name="kategori" required placeholder="Masukkan kategori">
+            </div>
+
+            <div class="form-group">
+                <label for="lokasi">Lokasi</label>
+                <input type="text" id="lokasi" name="lokasi" placeholder="Masukkan lokasi barang">
+            </div>
+
+            <div class="form-group">
+                <label for="jumlah">Jumlah Stok *</label>
+                <input type="number" id="jumlah" name="jumlah" required placeholder="Masukkan jumlah stok" min="0">
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-batal" onclick="closeModalTambah()">Batal</button>
+                <button type="submit" class="btn-simpan">Simpan Barang</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Edit -->
+<div id="modalEdit" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Edit Barang</h2>
+            <button class="modal-close" onclick="closeModalEdit()">&times;</button>
+        </div>
+
+        <form id="formEdit" class="modal-form">
+            <div class="form-group">
+                <label for="editNama">Nama Barang *</label>
+                <input type="text" id="editNama" name="nama" required placeholder="Masukkan nama barang">
+            </div>
+
+            <div class="form-group">
+                <label for="editKategori">Kategori *</label>
+                <input type="text" id="editKategori" name="kategori" required placeholder="Masukkan kategori">
+            </div>
+
+            <div class="form-group">
+                <label for="editLokasi">Lokasi</label>
+                <input type="text" id="editLokasi" name="lokasi" placeholder="Masukkan lokasi barang">
+            </div>
+
+            <div class="form-group">
+                <label for="editJumlah">Jumlah Stok *</label>
+                <input type="number" id="editJumlah" name="jumlah" required placeholder="Masukkan jumlah stok" min="0">
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-batal" onclick="closeModalEdit()">Batal</button>
+                <button type="submit" class="btn-simpan">Update Barang</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
