@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,12 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -19,14 +22,15 @@
         <nav class="navbar">
 
             <div class="logo">
-                ABC
+                <img src="assets/logo.png" alt="kmlogo">
+
             </div>
 
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">Collections</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#legacy">About Us</a></li>
             </ul>
 
             <div class="nav-icons">
@@ -43,9 +47,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
 
         <div class="overlay"></div>
+        <!-- <div class="overlay" style="background-image: url('assets/hero.avif');"></div> -->
 
         <div class="hero-content">
 
@@ -67,7 +72,7 @@
                     SHOP NOW
                 </a>
 
-                <a href="#" class="btn-secondary">
+                <a href="#collection" class="btn-secondary">
                     VIEW COLLECTION
                 </a>
 
@@ -77,89 +82,148 @@
 
     </section>
 
-    <section class="legacy">
+    <!-- Heritage Section -->
+    <section class="legacy" id="legacy">
 
-    <div class="container">
-
-        <div class="legacy-header">
-            <span>OUR HERITAGE</span>
-            <h2>Tailored For The Modern Gentleman</h2>
-        </div>
-
-        <div class="legacy-grid">
-
-            <div class="legacy-image">
-                <img src="assets/hero.avif" alt="Kingsmen Fashion">
+        <div class="container">
+            <div class="legacy-header">
+                <span>OUR HERITAGE</span>
+                <h2>Tailored For The Modern Gentleman</h2>
             </div>
 
-            <div class="legacy-content">
+            <div class="legacy-grid">
+                <div class="legacy-image">
+                    <img src="assets/hero.avif" alt="Kingsmen Fashion">
+                </div>
 
-                <p>
-                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                <div class="legacy-content">
+                    <p>
+                        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
 
-                <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
 
-                <a href="#" class="learn-more">
-                    Discover Our Story
-                </a>
+                    <a href="#" class="learn-more">
+                        Discover Our Story
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" id="collection">
+
+        <div class="collection-title">
+            <span>FEATURED COLLECTION</span>
+            <h2>Signature Pieces</h2>
+        </div>
+
+        <div class="collection-grid">
+
+            <div class="product-card">
+                <img src="assets/hero.avif">
+                <h3>Premium Wool Coats</h3>
+                <p>$249</p>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/hero.avif">
+                <h3>Premium Wool Coat</h3>
+                <p>$249</p>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/hero.avif">
+                <h3>Gentleman Blazer</h3>
+                <p>$199</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section" id="quote">
+
+        <div class="quote-content">
+
+            <h2>
+                "Manners Maketh Man."
+            </h2>
+
+            <p>
+                Elegance is not about being noticed,
+                it's about being remembered.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+
+            <div class="contact-header">
+                <span>REACH OUT</span>
+                <h2>Get In Touch</h2>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-info">
+
+                    <div class="info-item">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>Jl. MT. Haryono No. 69</p>
+                            <p>Balikpapan, Kalimantan Timur 73141</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>666-555-2244</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>kingsman.t@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="contact-form">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <textarea placeholder="Your Message" rows="5"></textarea>
+                    <button class="btn-submit">SEND MESSAGE</button>
+                </div>
 
             </div>
         </div>
-    </div>
-    </section>
-
-    <section class="collection">
-
-    <div class="collection-title">
-        <span>FEATURED COLLECTION</span>
-        <h2>Signature Pieces</h2>
-    </div>
-
-    <div class="collection-grid">
-
-        <div class="product-card">
-            <img src="assets/hero.avif">
-            <h3>Premium Wool Coats</h3>
-            <p>$249</p>
-        </div>
-
-        <div class="product-card">
-            <img src="assets/hero.avif">
-            <h3>Premium Wool Coat</h3>
-            <p>$249</p>
-        </div>
-
-        <div class="product-card">
-            <img src="assets/hero.avif">
-            <h3>Gentleman Blazer</h3>
-            <p>$199</p>
-        </div>
-
-    </div>
-    </section>
-
-    <section class="quote-section">
-
-    <div class="quote-content">
-
-        <h2>
-            "Manners Maketh Man."
-        </h2>
-
-        <p>
-            Elegance is not about being noticed,
-            it's about being remembered.
-        </p>
-
-    </div>
     </section>
 
 
     <script src="script.js"></script>
-    
+
 
 </body>
+
 </html>
