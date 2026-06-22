@@ -247,6 +247,152 @@ header {
     }
 }
 
+.profile-page{
+    padding:120px 8%;
+    background:#0f141b;
+    min-height:100vh;
+}
+
+.profile-container{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:30px;
+}
+
+.profile-sidebar{
+    background:#121821;
+    padding:30px;
+    text-align:center;
+    border:1px solid rgba(212,175,55,.2);
+}
+
+.profile-sidebar img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.profile-sidebar h3{
+    color:#fff;
+}
+
+.profile-sidebar p{
+    color:#aaa;
+    margin-bottom:30px;
+}
+
+.profile-sidebar ul{
+    list-style:none;
+}
+
+.profile-sidebar li{
+    padding:15px;
+    color:#ccc;
+    cursor:pointer;
+}
+
+.profile-sidebar li.active{
+    color:#d4af37;
+}
+
+.profile-content{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.welcome-card,
+.stat-card,
+.recent-orders{
+    background:#121821;
+    padding:25px;
+    border:1px solid rgba(212,175,55,.2);
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.stat-card h3{
+    color:#d4af37;
+    font-size:2rem;
+}
+
+.recent-orders table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.recent-orders th,
+.recent-orders td{
+    padding:15px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    color:#ccc;
+}
+
+.profile-sidebar h3 {
+    margin: 10px 0 4px;
+    color: white;
+}
+
+.profile-sidebar p {
+    margin: 0 0 12px;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.profile-info li {
+    padding: 4px 0;
+    margin: 0;
+}
+
+.profile-info strong {
+    color: #d4af37; 
+}
+
+.welcome-card h2,
+.welcome-card p {
+    color: white;
+}
+
+/* Statistics Cards */
+.stat-card h3 {
+    color: #d4af37;
+}
+
+.stat-card p {
+    color: white;
+}
+
+/* Recent Orders */
+.recent-orders h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.recent-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-orders th {
+    color: #d4af37;
+    text-align: left;
+    padding: 12px;
+}
+
+.recent-orders td {
+    color: white;
+    padding: 12px;
+}
+
+.recent-orders tr {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
 /* ===========================================================
    LEGACY / HERITAGE SECTION (index.html)
