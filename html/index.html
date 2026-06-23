@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KINGSMEN | Fashion For Gentlemen</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -22,7 +22,7 @@
         <nav class="navbar">
 
             <div class="logo">
-                <img src="assets/logo.png" alt="kmlogo">
+                <img src="../assets/logo.png" alt="kmlogo">
 
             </div>
 
@@ -87,7 +87,7 @@
 
             <div class="legacy-grid">
                 <div class="legacy-image">
-                    <img src="assets/hero.avif" alt="Kingsmen Fashion">
+                    <img src="../assets/hero.avif" alt="Kingsmen Fashion">
                 </div>
 
                 <div class="legacy-content">
@@ -108,33 +108,31 @@
             </div>
         </div>
     </section>
-<section class="signature-suits">
-    <div class="container">
- 
-        <div class="section-header">
-            <span class="subtitle">Premium Collection</span>
-            <h2>Signature Suits</h2>
-            <p>
-                Timeless tailoring crafted for modern gentlemen.
-                Designed with precision, confidence, and sophistication.
-            </p>
-        </div>
+        
+    <section class="signature-suits">
+        <div class="container">
+    
+            <div class="section-header">
+                <span class="subtitle">Premium Collection</span>
+                <h2>Signature Suits</h2>
+                <p>
+                    Timeless tailoring crafted for modern gentlemen.
+                    Designed with precision, confidence, and sophistication.
+                </p>
+            </div>
  
         <div class="suits-grid">
  
             <div class="suit-card">
                 <div class="suit-image">
-                    <img src="assets/ap.jpg" alt="Oxford Black Suit">
+                    <img src="../assets/ap.jpg" alt="Oxford Black Suit">
                     <div class="suit-overlay">
-                        <button
+                        <a
                             class="btn-detail"
-                            data-name="Oxford Black Suit"
-                            data-desc="Crafted from premium wool blend with a slim-fit silhouette."
-                            data-price="$349"
-                            data-img="assets/ap.jpg"
+                            href="collection.html?product=Oxford%20Black%20Suit"
                         >
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
  
@@ -147,17 +145,14 @@
  
             <div class="suit-card">
                 <div class="suit-image">
-                    <img src="assets/ap.jpg" alt="Windsor Navy Suit">
+                    <img src="../assets/ap.jpg" alt="Windsor Navy Suit">
                     <div class="suit-overlay">
-                        <button
+                        <a
                             class="btn-detail"
-                            data-name="Windsor Navy Suit"
-                            data-desc="Modern tailoring featuring premium navy fabric and elegant finishing."
-                            data-price="$379"
-                            data-img="assets/ap.jpg"
+                            href="collection.html?product=Windsor%20Navy%20Suit"
                         >
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
  
@@ -170,17 +165,14 @@
  
             <div class="suit-card">
                 <div class="suit-image">
-                    <img src="assets/ap.jpg" alt="Royal Grey Three Piece">
+                    <img src="../assets/ap.jpg" alt="Royal Grey Three Piece">
                     <div class="suit-overlay">
-                        <button
+                        <a
                             class="btn-detail"
-                            data-name="Royal Grey Three Piece"
-                            data-desc="Three-piece suit designed with British-inspired sophistication."
-                            data-price="$429"
-                            data-img="assets/ap.jpg"
+                            href="collection.html?product=Royal%20Grey%20Three%20Piece"
                         >
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
  
@@ -193,17 +185,14 @@
  
             <div class="suit-card">
                 <div class="suit-image">
-                    <img src="assets/ap.jpg" alt="Executive Pinstripe">
+                    <img src="../assets/ap.jpg" alt="Executive Pinstripe">
                     <div class="suit-overlay">
-                        <button
+                        <a
                             class="btn-detail"
-                            data-name="Executive Pinstripe"
-                            data-desc="Elegant pinstripe design suitable for executive meetings and events."
-                            data-price="$399"
-                            data-img="assets/ap.jpg"
+                            href="collection.html?product=Executive%20Pinstripe"
                         >
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
  
@@ -217,41 +206,40 @@
         </div>
 
         <div class="suits-grid">
-   ...
-</div>
+            ...
+            </div>
 
-<div id="detailSection" class="product-detail">
-    <button class="close-detail">&times;</button>
+            <div id="detailSection" class="product-detail">
+                <button class="close-detail">&times;</button>
 
-    <div class="detail-content">
+                <div class="detail-content">
 
-        <div class="detail-image">
-            <img id="detailImage" src="" alt="">
-        </div>
+                    <div class="detail-image">
+                        <img id="detailImage" src="" alt="">
+                    </div>
 
-        <div class="detail-info">
-            <h2 id="detailTitle"></h2>
+                    <div class="detail-info">
+                        <h2 id="detailTitle"></h2>
 
-            <p id="detailDesc"></p>
+                        <p id="detailDesc"></p>
 
-            <h3 id="detailPrice"></h3>
+                        <h3 id="detailPrice"></h3>
 
-            <button class="btn-submit">
-                ADD TO CART
-            </button>
-        </div>
+                        <button class="btn-submit">
+                            ADD TO CART
+                        </button>
+                    </div>
 
+                </div>
+            </div>
+
+            <div id="detailOverlay"></div>
+
+            </div>
+            </section>
+            
     </div>
-</div>
-
-<div id="detailOverlay"></div>
-
-</div>
 </section>
- 
-    </div>
-</section>
- 
 
     <!-- Quote Section -->
     <section class="quote-section" id="quote">
@@ -259,12 +247,11 @@
         <div class="quote-content">
 
             <h2>
-                "Manners Maketh Man."
+                "One Piece is Real"
             </h2>
 
             <p>
-                Elegance is not about being noticed,
-                it's about being remembered.
+                Elegance is not about being noticed, it's about being remembered.
             </p>
 
         </div>
@@ -333,7 +320,7 @@
     </section>
 
 
-    <script src="script.js"></script>
+    <script src="../js/script.js" async defer></script>
 
 
 </body>
