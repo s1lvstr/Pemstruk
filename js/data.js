@@ -17,6 +17,22 @@ const products = [
     },
     {
         id: 3,
+        name: "Charcoal Stripe Suit",
+        category: "Signature Suit",
+        price: "Rp 5.100.000",
+        image: "../assets/products/suit1.jpg",
+        description: "Sophisticated charcoal suit with a subtle stripe pattern for confident professionals."
+    },
+    {
+        id: 4,
+        name: "Midnight Pinstripe Suit",
+        category: "Signature Suit",
+        price: "Rp 5.300.000",
+        image: "../assets/products/suit2.jpg",
+        description: "Refined pinstripe tailoring crafted for evening events and business meetings."
+    },
+    {
+        id: 5,
         name: "Classic White Shirt",
         category: "Shirt",
         price: "Rp 650.000",
