@@ -1,184 +1,256 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>My Profile - Kingsman</title>
+        <meta name="description" content="Manage your Kingsman account and orders">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/style.css">
-
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
     <body>
 
-        <!-- Navbar -->
-    <header>
-        <nav class="navbar">
+        <!-- NAVBAR -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../assets/logo.png" alt="Kingsman Logo">
+                </div>
 
-            <div class="logo">
-                <img src="../assets/logo.png" alt="kmlogo">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collection.html">Collections</a></li>
+                    <li><a href="index.html#legacy">About Us</a></li>
+                </ul>
+
+                <div class="nav-icons">
+                    <a href="cart.html"><i class="fas fa-bag-shopping"></i></a>
+                    <a href="profile.html"><i class="fas fa-user"></i></a>
+                </div>
+
+                <button class="hamburger" id="hamburger">☰</button>
+            </nav>
+        </header>
+
+        <!-- PROFILE SECTION -->
+        <section class="profile-page">
+            <!-- BREADCRUMB -->
+            <div class="profile-breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <span class="current">My Profile</span>
             </div>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="collection.html">Collections</a></li>
-                <li><a href="index.html#legacy">About Us</a></li>
-            </ul>
+            <div class="profile-container">
 
-            <div class="nav-icons">
-                <a href="cart.html"><i class="fas fa-bag-shopping"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
+                <!-- SIDEBAR -->
+                <aside class="profile-sidebar">
+                    <img src="../assets/ap.jpg" alt="Profile Picture">
+
+                    <h3>Silvester Jevon</h3>
+
+                    <ul class="profile-info">
+                        <li><strong>Email:</strong><br>silvester@email.com</li>
+                        <li><strong>Phone:</strong><br>123-456-7890</li>
+                    </ul>
+                </aside>
+
+                <!-- MAIN CONTENT -->
+                <div class="profile-content">
+
+                    <!-- WELCOME CARD -->
+                    <div class="welcome-card">
+                        <h2>Welcome Back</h2>
+                        <p>Manage your Kingsman collection and account</p>
+                    </div>
+
+                    <!-- STATISTICS GRID -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>12</h3>
+                            <p>Orders</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>5</h3>
+                            <p>Wishlist Items</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>2</h3>
+                            <p>Tailoring Sessions</p>
+                        </div>
+                    </div>
+
+                    <!-- RECENT ORDERS -->
+                    <div class="recent-orders">
+                        <h3>Recent Orders</h3>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Order Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Oxford Black Suit</td>
+                                    <td>20 Jun 2026</td>
+                                    <td><span class="status-delivered">Delivered</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Royal Grey Suit</td>
+                                    <td>15 Jun 2026</td>
+                                    <td><span class="status-processing">Processing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
             </div>
+        </section>
 
-            <button class="hamburger" id="hamburger">
-                ☰
+        <!-- FLOATING ACTION BUTTON -->
+        <div class="fab-menu" id="fabMenu">
+            <button class="fab-main" id="fabMain">
+                <i class="fas fa-ellipsis-v"></i>
             </button>
-
-        </nav>
-    </header>
-        
-    <section class="profile-page">
-
-    <div class="profile-container">
-
-        <aside class="profile-sidebar">
-
-            <img src="../assets/ap.jpg" alt="Profile">
-
-            <ul class="profile-info">
-                <li><strong>Name:</strong> Silvester Jevon</li>
-                <li><strong>Email:</strong> silvester@email.com</li>
-                <li><strong>Phone:</strong> 123-456-7890</li>
-            </ul>
-
-        </aside>
-
-        <div class="profile-content">
-
-            <div class="welcome-card">
-                <h2>Welcome Back</h2>
-                <p>Manage your Kingsman collection and account.</p>
-            </div>
-
-            <div class="stats-grid">
-
-                <div class="stat-card">
-                    <h3>12</h3>
-                    <p>Orders</p>
-                </div>
-
-                <div class="stat-card">
-                    <h3>5</h3>
-                    <p>Wishlist</p>
-                </div>
-
-                <div class="stat-card">
-                    <h3>2</h3>
-                    <p>Tailoring Sessions</p>
-                </div>
-
-            </div>
-
-            <div class="recent-orders">
-
-                <h3>Recent Orders</h3>
-
-                <table>
-                    <tr>
-                        <th>Product</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                    </tr>
-
-                    <tr>
-                        <td>Oxford Black Suit</td>
-                        <td>20 Jun 2026</td>
-                        <td>Delivered</td>
-                    </tr>
-
-                    <tr>
-                        <td>Royal Grey Suit</td>
-                        <td>15 Jun 2026</td>
-                        <td>Processing</td>
-                    </tr>
-
-                </table>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-container">
-
-            <div class="contact-header">
-                <span>REACH OUT</span>
-                <h2>Get In Touch</h2>
-            </div>
-
-            <div class="contact-grid">
-
-                <div class="contact-info">
-
-                    <div class="info-item">
-                        <i class="fas fa-location-dot"></i>
-                        <div>
-                            <h4>Visit Us</h4>
-                            <p>Jl. MT. Haryono No. 69</p>
-                            <p>Balikpapan, Kalimantan Timur 73141</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Call Us</h4>
-                            <p>666-555-2244</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email Us</h4>
-                            <p>kingsman.t@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-socials">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-
-                </div>
-
-                <div class="contact-form">
-                    <input type="text" id="name" placeholder="Your Name">
-                    <small class="error" id="nameError"></small>
-
-                    <input type="email" id="email" placeholder="Your Email">
-                    <small class="error" id="emailError"></small>
-
-                    <textarea id="message" placeholder="Your Message" rows="5"></textarea>
-                    <small class="error" id="messageError"></small>
-
-                    <button class="btn-submit">SEND MESSAGE</button>
-                </div>
-
+            <div class="fab-actions">
+                <a href="#" class="fab-action" title="Live Chat Support">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat Support</span>
+                </a>
+                <a href="#" class="fab-action" title="Download Invoice">
+                    <i class="fas fa-file-download"></i>
+                    <span>Download Invoice</span>
+                </a>
+                <a href="#" class="fab-action" title="Track Order">
+                    <i class="fas fa-location-arrow"></i>
+                    <span>Track Order</span>
+                </a>
+                <a href="#" class="fab-action" title="Edit Profile">
+                    <i class="fas fa-user-edit"></i>
+                    <span>Edit Profile</span>
+                </a>
             </div>
         </div>
-    </section>
-        
+
+        <!-- CONTACT SECTION -->
+        <section class="contact" id="contact">
+            <div class="contact-container">
+
+                <!-- HEADER -->
+                <div class="contact-header">
+                    <span>REACH OUT</span>
+                    <h2>Get In Touch</h2>
+                </div>
+
+                <!-- CONTACT GRID -->
+                <div class="contact-grid">
+
+                    <!-- CONTACT INFO -->
+                    <div class="contact-info">
+
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h4>VISIT US</h4>
+                                <p>Jl. MT. Haryono No. 69</p>
+                                <p>Balikpapan, Kalimantan Timur 73141</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>CALL US</h4>
+                                <p>666-555-2244</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>EMAIL US</h4>
+                                <p>kingsman.t@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <!-- SOCIAL LINKS -->
+                        <div class="contact-socials">
+                            <a href="#" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Follow us on TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+
+                    </div>
+
+                    <!-- CONTACT FORM -->
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <small class="error" id="nameError"></small>
+
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <small class="error" id="emailError"></small>
+
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        <small class="error" id="messageError"></small>
+
+                        <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TOAST NOTIFICATIONS -->
         <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+        <!-- SCRIPTS -->
         <script src="../js/common.js" defer></script>
         <script src="../js/ui.js" defer></script>
+
+        <!-- FAB MENU FUNCTIONALITY -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const fabMain = document.getElementById('fabMain');
+                const fabMenu = document.getElementById('fabMenu');
+                const fabActions = fabMenu.querySelector('.fab-actions');
+
+                // Toggle FAB menu
+                fabMain.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    fabMain.classList.toggle('active');
+                    fabActions.classList.toggle('show');
+                });
+
+                // Close FAB menu when clicking on an action
+                const fabActionLinks = fabMenu.querySelectorAll('.fab-action');
+                fabActionLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        // Allow clicks to work normally, but close the menu
+                        setTimeout(() => {
+                            fabMain.classList.remove('active');
+                            fabActions.classList.remove('show');
+                        }, 100);
+                    });
+                });
+
+                // Close FAB menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!fabMenu.contains(e.target)) {
+                        fabMain.classList.remove('active');
+                        fabActions.classList.remove('show');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
