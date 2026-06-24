@@ -17,51 +17,19 @@ const detailPrice = document.getElementById("detailPrice");
 const detailImage = document.getElementById("detailImage");
 const detailOverlay = document.getElementById("detailOverlay");
 
-const signatureSuitsGrid = document.getElementById("signatureSuitsGrid");
+document.querySelectorAll(".btn-detail").forEach(button => {
 
-function renderSignatureSuits() {
-    if (!signatureSuitsGrid || !window.PRODUCTS) return;
+    button.addEventListener("click", () => {
 
-    const suits = window.PRODUCTS.filter(product =>
-        String(product.category || "").toLowerCase().includes("signature")
-    );
+        const card = button.closest(".shop-card");
 
-    signatureSuitsGrid.innerHTML = suits.slice(0, 4).map(product => `
-        <div class="suit-card" data-name="${product.name}" data-desc="${product.description}" data-price="${product.price}" data-img="${product.image}">
-            <div class="suit-image">
-                <img src="${product.image}" alt="${product.name}">
-                <div class="suit-overlay">
-                    <a class="btn-detail" href="collection.html?product=${encodeURIComponent(product.name)}">View Details</a>
-                </div>
-            </div>
-            <div class="suit-content">
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <span class="suit-price">${product.price}</span>
-            </div>
-        </div>
-    `).join("");
-}
+        detailTitle.textContent = card.dataset.name;
+        detailDesc.textContent = card.dataset.desc;
+        detailPrice.textContent = card.dataset.price;
+        detailImage.src = card.dataset.img;
 
-renderSignatureSuits();
-
-document.addEventListener("click", event => {
-    const button = event.target.closest(".btn-detail");
-    if (!button) return;
-    if (button.tagName === "A") return; // let collection redirect happen naturally
-
-    event.preventDefault();
-
-    const card = button.closest(".shop-card, .suit-card");
-    if (!card) return;
-
-    detailTitle.textContent = card.dataset.name || "";
-    detailDesc.textContent = card.dataset.desc || "";
-    detailPrice.textContent = card.dataset.price || "";
-    detailImage.src = card.dataset.img || "";
-
-    if (productGrid) {
         const cards = [...document.querySelectorAll(".shop-card")];
+
         const columns = getComputedStyle(productGrid)
             .gridTemplateColumns
             .split(" ")
@@ -75,21 +43,15 @@ document.addEventListener("click", event => {
                 cards.length
             ) - 1;
 
-        if (cards[rowEndIndex]) {
-            cards[rowEndIndex].after(detailSection);
-        } else {
-            card.after(detailSection);
-        }
-    } else {
-        card.after(detailSection);
-    }
+        cards[rowEndIndex].after(detailSection);
 
-    detailSection.classList.add("active");
-    detailOverlay.classList.add("active");
+        detailSection.classList.add("active");
+        detailOverlay.classList.add("active");
 
-    detailSection.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest"
+        detailSection.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
     });
 });
 
