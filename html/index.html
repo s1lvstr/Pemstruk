@@ -104,7 +104,7 @@
             </div>
         </div>
     </section>
-<section class="signature-suits">
+<section class="signature-suits" id="signature-suits">
     <div class="container">
  
         <div class="section-header">
@@ -116,123 +116,36 @@
             </p>
         </div>
  
-        <div class="suits-grid">
- 
-            <div class="suit-card">
-                <div class="suit-image">
-                    <img src="../assets/ap.jpg" alt="Oxford Black Suit">
-                    <div class="suit-overlay">
-                        <a
-                            class="btn-detail"
-                            href="collection.html?product=Oxford%20Black%20Suit"
-                        >
-                            View Details
-                        </a>
-                    </div>
-                </div>
- 
-                <div class="suit-content">
-                    <h3>Oxford Black Suit</h3>
-                    <p>Classic elegance for formal occasions.</p>
-                    <span class="suit-price">$349</span>
-                </div>
-            </div>
- 
-            <div class="suit-card">
-                <div class="suit-image">
-                    <img src="../assets/ap.jpg" alt="Windsor Navy Suit">
-                    <div class="suit-overlay">
-                        <a
-                            class="btn-detail"
-                            href="collection.html?product=Windsor%20Navy%20Suit"
-                        >
-                            View Details
-                        </a>
-                    </div>
-                </div>
- 
-                <div class="suit-content">
-                    <h3>Windsor Navy Suit</h3>
-                    <p>Perfect balance of business and luxury.</p>
-                    <span class="suit-price">$379</span>
-                </div>
-            </div>
- 
-            <div class="suit-card">
-                <div class="suit-image">
-                    <img src="../assets/ap.jpg" alt="Royal Grey Three Piece">
-                    <div class="suit-overlay">
-                        <a
-                            class="btn-detail"
-                            href="collection.html?product=Royal%20Grey%20Three%20Piece"
-                        >
-                            View Details
-                        </a>
-                    </div>
-                </div>
- 
-                <div class="suit-content">
-                    <h3>Royal Grey Three Piece</h3>
-                    <p>For gentlemen who appreciate refinement.</p>
-                    <span class="suit-price">$429</span>
-                </div>
-            </div>
- 
-            <div class="suit-card">
-                <div class="suit-image">
-                    <img src="../assets/ap.jpg" alt="Executive Pinstripe">
-                    <div class="suit-overlay">
-                        <a
-                            class="btn-detail"
-                            href="collection.html?product=Executive%20Pinstripe"
-                        >
-                            View Details
-                        </a>
-                    </div>
-                </div>
- 
-                <div class="suit-content">
-                    <h3>Executive Pinstripe</h3>
-                    <p>Power dressing for modern executives.</p>
-                    <span class="suit-price">$399</span>
-                </div>
-            </div>
- 
+        <div class="suits-grid" id="signatureSuitsGrid">
+            <!-- Signature suits rendered from JS -->
         </div>
 
-        <div class="suits-grid">
-   
-</div>
+        <div id="detailSection" class="product-detail">
+            <button class="close-detail">&times;</button>
 
-            <div id="detailSection" class="product-detail">
-                <button class="close-detail">&times;</button>
+            <div class="detail-content">
 
-                <div class="detail-content">
-
-                    <div class="detail-image">
-                        <img id="detailImage" src="" alt="">
-                    </div>
-
-                    <div class="detail-info">
-                        <h2 id="detailTitle"></h2>
-
-                        <p id="detailDesc"></p>
-
-                        <h3 id="detailPrice"></h3>
-
-                        <button class="btn-submit">
-                            ADD TO CART
-                        </button>
-                    </div>
-
+                <div class="detail-image">
+                    <img id="detailImage" src="" alt="">
                 </div>
-            </div>
 
-            <div id="detailOverlay"></div>
+                <div class="detail-info">
+                    <h2 id="detailTitle"></h2>
+
+                    <p id="detailDesc"></p>
+
+                    <h3 id="detailPrice"></h3>
+
+                    <button class="btn-submit">
+                        ADD TO CART
+                    </button>
+                </div>
 
             </div>
-            </section>
-            
+        </div>
+
+        <div id="detailOverlay"></div>
+
     </div>
 </section>
 
@@ -315,10 +228,15 @@
     </section>
 
 
+<<<<<<< HEAD
     <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
     <script src="../js/common.js" defer></script>
     <script src="../js/ui.js" defer></script>
 
+=======
+    <script src="../js/data.js" defer></script>
+    <script src="../js/script.js" defer></script>
+>>>>>>> 8f0da269f1e01866bc41b846fe0cfa8e562707d9
 
 </body>
 
