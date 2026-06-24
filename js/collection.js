@@ -48,17 +48,37 @@ document.addEventListener('DOMContentLoaded', () => {
             exs.forEach(e => e.remove());
         }
 
+        function parsePriceToIDR(price){
+            // Only accept prices explicitly in Rupiah (contain 'rp' or 'idr')
+            if (!price) return null;
+            if (typeof price === 'number') return Math.round(price);
+            const str = String(price).toLowerCase();
+            if (str.includes('rp') || str.includes('idr')) {
+                const s = str.replace(/[^0-9]/g, '');
+                if (!s) return null;
+                return parseInt(s, 10);
+            }
+            return null;
+        }
+
         function addToCart(product){
             try{
-                const raw = localStorage.getItem('CART') || '[]';
+                const priceIdr = parsePriceToIDR(product.price);
+                if (priceIdr === null) {
+                    if (typeof showToast === 'function') showToast('Hanya menerima harga dalam Rupiah (contoh: Rp 4.500.000)');
+                    return false;
+                }
+
+                const raw = localStorage.getItem('cart') || '[]';
                 const cart = JSON.parse(raw);
                 const existing = cart.find(i=>String(i.id)===String(product.id));
                 if(existing){ existing.qty = (existing.qty||1) + 1; }
-                else { cart.push({ id: product.id, name: product.name, price: product.price, img: product.img, qty: 1 }); }
-                localStorage.setItem('CART', JSON.stringify(cart));
+                else { cart.push({ id: product.id, name: product.name, price: priceIdr, img: product.img, qty: 1 }); }
+                localStorage.setItem('cart', JSON.stringify(cart));
                 document.dispatchEvent(new CustomEvent('cart:updated', { detail: { cart } }));
+                if (typeof showToast === 'function') showToast('Berhasil ditambahkan ke keranjang');
                 return true;
-            }catch(e){ console.error('cart error', e); return false; }
+            } catch(e) { console.error('cart error', e); if (typeof showToast === 'function') showToast('Error menambahkan ke keranjang'); return false; }
         }
 
         function toggleExpand(card) {

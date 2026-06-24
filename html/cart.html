@@ -65,79 +65,9 @@
                 </div>
 
                 <div class="cart-items" id="cartItems">
-
-                    <!-- cart 1 -->
-                    <div class="cart-item" data-id="1" data-price="349">
-                        <div class="item-product">
-                            <div class="item-img">
-                                <img src="../assets/ap.jpg" alt="Oxford Black Suit">
-                            </div>
-                            <div class="item-details">
-                                <h3>Oxford Black Suit</h3>
-                                <p class="item-meta">Size: M &nbsp;|&nbsp; Color: Black</p>
-                                <button class="item-remove" data-id="1">
-                                    <i class="fas fa-trash-can"></i> Remove
-                                </button>
-                            </div>
-                        </div>
-                        <div class="item-price">$349</div>
-                        <div class="item-qty">
-                            <button class="qty-btn minus" data-id="1">−</button>
-                            <span class="qty-value" id="qty-1">1</span>
-                            <button class="qty-btn plus" data-id="1">+</button>
-                        </div>
-                        <div class="item-total" id="total-1">$349</div>
-                    </div>
-
-                    <!-- cart 2 -->
-                    <div class="cart-item" data-id="2" data-price="199">
-                        <div class="item-product">
-                            <div class="item-img">
-                                <img src="../assets/hero.avif" alt="Windsor Tailored Blazer">
-                            </div>
-                            <div class="item-details">
-                                <h3>Windsor Tailored Blazer</h3>
-                                <p class="item-meta">Size: L &nbsp;|&nbsp; Color: Navy</p>
-                                <button class="item-remove" data-id="2">
-                                    <i class="fas fa-trash-can"></i> Remove
-                                </button>
-                            </div>
-                        </div>
-                        <div class="item-price">$199</div>
-                        <div class="item-qty">
-                            <button class="qty-btn minus" data-id="2">−</button>
-                            <span class="qty-value" id="qty-2">1</span>
-                            <button class="qty-btn plus" data-id="2">+</button>
-                        </div>
-                        <div class="item-total" id="total-2">$199</div>
-                    </div>
-
-                    <!-- cart 3 -->
-                    <div class="cart-item" data-id="3" data-price="89">
-                        <div class="item-product">
-                            <div class="item-img">
-                                <img src="../assets/hero.avif" alt="Oxford Dress Shirt">
-                            </div>
-                            <div class="item-details">
-                                <h3>Oxford Dress Shirt</h3>
-                                <p class="item-meta">Size: M &nbsp;|&nbsp; Color: White</p>
-                                <button class="item-remove" data-id="3">
-                                    <i class="fas fa-trash-can"></i> Remove
-                                </button>
-                            </div>
-                        </div>
-                        <div class="item-price">$89</div>
-                        <div class="item-qty">
-                            <button class="qty-btn minus" data-id="3">−</button>
-                            <span class="qty-value" id="qty-3">2</span>
-                            <button class="qty-btn plus" data-id="3">+</button>
-                        </div>
-                        <div class="item-total" id="total-3">$178</div>
-                    </div>
-
+                
                 </div>
 
-                <!-- empty state -->
                 <div class="cart-empty" id="cartEmpty">
                     <i class="fas fa-bag-shopping"></i>
                     <p>Your cart is empty.</p>
@@ -146,7 +76,6 @@
                     </a>
                 </div>
 
-                <!-- continue shopping -->
                 <div class="cart-actions">
                     <a href="collection.html" class="btn-back">
                         <i class="fas fa-arrow-left"></i> Continue Shopping
@@ -161,18 +90,18 @@
                 <h2>Order Summary</h2>
 
                 <div class="summary-row">
-                    <span>Subtotal (<span id="itemCount">3</span> items)</span>
-                    <span id="subtotalVal">$726</span>
+                    <span>Subtotal (<span id="itemCount">0</span> items)</span>
+                    <span id="subtotalVal">Rp0</span>
                 </div>
 
                 <div class="summary-row">
                     <span>Shipping</span>
-                    <span id="shippingVal">$15</span>
+                    <span id="shippingVal">Rp0</span>
                 </div>
 
                 <div class="summary-row">
                     <span>Tax (5%)</span>
-                    <span id="taxVal">$36.30</span>
+                    <span id="taxVal">Rp0</span>
                 </div>
 
                 <div class="summary-divider"></div>
@@ -265,7 +194,10 @@
         </div>
     </section>
 
-    <script src="../js/script.js" async defer></script>
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+    <script src="../js/common.js" defer></script>
+    <script src="../js/ui.js" defer></script>
+    <script src="../js/cart.js" defer></script>
 
 </body>
 </html>
