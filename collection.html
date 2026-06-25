@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart | Fashion For Gentlemen</title>
+    <title>Collection | Fashion For Gentlemen</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- navbar -->
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
 
             <div class="logo">
-                <img src="../assets/logo.png" alt="kmlogo">
+                <img src="assets/logo.png" alt="kmlogo">
 
             </div>
 
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="collection.html">Collections</a></li>
-                <li><a href="../index.html#legacy">About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collection.html" class="active-link">Collections</a></li>
+                <li><a href="index.html#legacy">About Us</a></li>
 
                 <!-- navbar mobile -->
                 <li class="mobile-only">
-                    <a href="cart.html" class="active-link">
+                    <a href="cart.html">
                         <i class="fas fa-bag-shopping"></i> Cart
                     </a>
                 </li>
@@ -54,104 +59,102 @@
         </nav>
     </header>
 
-    <!-- page banner -->
+    <!-- Page Banner -->
     <section class="page-banner">
         <div class="banner-overlay"></div>
         <div class="banner-content">
-            <span class="subtitle">YOUR SELECTION</span>
-            <h1>Shopping Cart</h1>
+            <span class="subtitle">SPRING / SUMMER 2026</span>
+            <h1>The Collection</h1>
             <div class="breadcrumb">
-                <a href="../index.html">Home</a>
+                <a href="index.html">Home</a>
                 <span>/</span>
-                <a href="collection.html">Collection</a>
-                <span>/</span>
-                <span>Cart</span>
+                <span>Collection</span>
             </div>
         </div>
     </section>
 
-    <!-- cart section -->
-    <section class="cart-section">
-        <div class="cart-container">
+    <!-- Collection Section -->
+    <section class="shop-section">
+        <div class="shop-container">
 
-            <!-- kiri: daftar ireng -->
-            <div class="cart-items-wrap">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
 
-                <div class="cart-header-row">
-                    <span>Product</span>
-                    <span>Price</span>
-                    <span>Quantity</span>
-                    <span>Total</span>
+                <div class="filter-meta">
+                    <span id="resultCount">12 Products</span>
+                    <select id="sortSelect">
+                        <option value="featured">Featured</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                    </select>
                 </div>
 
-                <div class="cart-items" id="cartItems">
-                
+                <div class="filter-tabs" id="filterTabs">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="suit">Suits</button>
+                    <button class="filter-btn" data-filter="blazer">Blazers</button>
+                    <button class="filter-btn" data-filter="shirt">Shirts</button>
+                    <button class="filter-btn" data-filter="footwear">Footwear</button>
+                    <button class="filter-btn" data-filter="accessory">Accessories</button>
                 </div>
 
-                <div class="cart-empty" id="cartEmpty">
-                    <i class="fas fa-bag-shopping"></i>
-                    <p>Your cart is empty.</p>
-                    <a href="collection.html" class="btn-primary" style="display:inline-block; margin-top:20px;">
-                        Browse Collection
-                    </a>
-                </div>
-
-                <div class="cart-actions">
-                    <a href="collection.html" class="btn-back">
-                        <i class="fas fa-arrow-left"></i> Continue Shopping
-                    </a>
+                <div class="filter-search">
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <i class="fas fa-search"></i>
                 </div>
 
             </div>
 
-            <!-- kanan: ringkasan Order -->
-            <div class="cart-summary">
+            <div class="product-grid" id="productGrid">
+                <!-- Products are rendered dynamically by JS (js/collection.js). Keep this empty to avoid duplicates. -->
+            </div>
 
-                <h2>Order Summary</h2>
+            <!-- Product Detail (modal)-->
+            <!-- <div id="detailSection" class="product-detail">
 
-                <div class="summary-row">
-                    <span>Subtotal (<span id="itemCount">0</span> items)</span>
-                    <span id="subtotalVal">Rp0</span>
+                <button class="close-detail">&times;</button>
+
+                <div class="detail-content">
+
+                    <div class="detail-image">
+                        <img id="detailImage" src="assets/ap.jpg" alt="">
+                    </div>
+
+                    <div class="detail-info">
+                        <h2 id="detailTitle"></h2>
+
+                        <p id="detailDesc"></p>
+
+                        <h3 id="detailPrice"></h3>
+
+                        <button class="btn-submit">
+                            ADD TO CART
+                        </button>
+                    </div>
+
                 </div>
 
-                <div class="summary-row">
-                    <span>Shipping</span>
-                    <span id="shippingVal">Rp0</span>
-                </div>
+            </div> -->
 
-                <div class="summary-row">
-                    <span>Tax (5%)</span>
-                    <span id="taxVal">Rp0</span>
-                </div>
+            <div id="detailOverlay"></div>
 
-                <div class="summary-divider"></div>
-
-                <div class="summary-row summary-total">
-                    <span>Total</span>
-                    <span id="totalVal">$777.30</span>
-                </div>
-
-                <button class="btn-checkout">
-                    PROCEED TO CHECKOUT
+            <!-- Load More -->
+            <div class="load-more-wrap">
+                <button class="btn-load-more" id="loadMoreBtn">
+                    Load More
                 </button>
+            </div>
 
-                <div class="summary-note">
-                    <i class="fas fa-lock"></i>
-                    Secure checkout. Your data is protected.
-                </div>
-
-                <div class="summary-badges">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                </div>
-
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState">
+                <p>No products found in this category.</p>
             </div>
 
         </div>
     </section>
 
-        <!-- contact Section -->
+    <!-- contact Section -->
     <section class="contact" id="contact">
         <div class="contact-container">
 
@@ -215,9 +218,11 @@
     </section>
 
     <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
-    <script src="../js/common.js" defer></script>
-    <script src="../js/ui.js" defer></script>
-    <script src="../js/cart.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/collection.js" defer></script>
 
 </body>
+
 </html>
