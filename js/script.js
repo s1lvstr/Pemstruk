@@ -12,7 +12,7 @@ function renderSignatureSuits() {
             <div class="suit-image">
                 <img src="${product.image}" alt="${product.name}">
                 <div class="suit-overlay">
-                    <a class="btn-detail" href="collection.html?product=${encodeURIComponent(product.name)}">View Details</a>
+                    <a class="btn-detail" href="html/collection.html?product=${encodeURIComponent(product.name)}">View Details</a>
                 </div>
             </div>
             <div class="suit-content">
