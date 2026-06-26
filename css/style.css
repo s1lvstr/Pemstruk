@@ -141,6 +141,20 @@ header {
     }
 }
 
+@media (max-width:768px){
+
+    .navbar{
+        padding:15px 20px;
+    }
+
+    .logo img{
+        width:40px;
+    }
+
+    .nav-menu{
+        gap:15px;
+    }
+}
 
 /* ===========================================================
    HERO SECTION (index.html)
@@ -206,10 +220,28 @@ header {
     font-size: .9rem;
 }
 
-.hero-content h1 {
-    font-size: 7rem;
-    letter-spacing: 12px;
-    margin-bottom: 20px;
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.8rem;
+        letter-spacing:3px;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+        padding:0 20px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:220px;
+        text-align:center;
+    }
 }
 
 .hero-content p {
@@ -471,11 +503,6 @@ header {
     font-size: .9rem;
 }
 
-.legacy-header h2 {
-    font-size: 3rem;
-    margin-top: 20px;
-}
-
 .legacy-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -501,6 +528,22 @@ header {
     text-decoration: none;
     border-bottom: 1px solid #d4af37;
     padding-bottom: 5px;
+}
+
+@media(max-width:768px){
+
+    .legacy-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .legacy-image img{
+        height:300px;
+    }
+
+    .legacy-header h2{
+        font-size:2rem;
+    }
 }
 
 
@@ -924,6 +967,18 @@ header {
 
 .input-error {
     border: 1px solid #d4af37 !important;
+}
+
+@media(max-width:768px){
+
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .btn-submit{
+        width:100%;
+    }
 }
 
 
